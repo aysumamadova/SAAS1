@@ -1,0 +1,36 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Title1">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="Desc">SubTitle</label>
+                <input asp-for="Desc" class="form-control" placeholder="SubTitle">
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Media</h4>
+                </div>
+                <div class="card-body">
+                    <div class="input-upload">
+                        <input asp-for="Photo" class="form-control" accept="image/*" />
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+        </div>  </div>
+    </form>
+</div>
