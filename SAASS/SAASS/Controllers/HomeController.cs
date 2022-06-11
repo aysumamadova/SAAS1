@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SAASS.DAL;
 using SAASS.Models;
@@ -18,10 +19,10 @@ namespace SAASS.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Slider> sliders = _context.Sliders.ToList();
-            return View(sliders);
+            List<Slider> slider = await _context.Sliders.ToListAsync();
+            return View(slider);
         }
 
        

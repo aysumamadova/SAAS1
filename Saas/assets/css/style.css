@@ -8,7 +8,7 @@ nav {
     background-image:url("https://preview.uideck.com/items/saaspal/assets/img/hero/hero-bg.svg") ;
     background-repeat: no-repeat;
     background-position: top center;
-    height: 100vh;
+    width: 100%;
 }
 .bi{
     font-size: 30px;
@@ -72,4 +72,7 @@ padding-bottom: 10%;
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
+}
+a{
+    text-decoration: none;
 }
